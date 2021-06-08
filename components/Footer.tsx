@@ -1,10 +1,10 @@
-import styles from '../styles/Footer.module.css'
+//import styles from '../styles/Footer.module.css'
 import Image from 'next/image'
 
 const Footer = () => {
   return (
 
-    <footer className={styles.footer}>
+    <footer>
       <hr/>
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -12,7 +12,7 @@ const Footer = () => {
         rel="noopener noreferrer"
       >
         Powered by{' '}
-        <span className={styles.logo}>
+        <span>
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
       </a>
