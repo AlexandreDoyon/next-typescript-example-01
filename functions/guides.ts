@@ -6,8 +6,15 @@ exports.handler = async (event, context) => {
     {title: 'somme text 3', author: 'alex 3'},
   ]
 
+  if (context.clientContext.user) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify(guides)
+    }
+  }
+
   return {
-    statusCode: 200,
-    body: JSON.stringify(guides)
+    statusCode: 401,
+    body: JSON.stringify({ mssg: 'must be logged' })
   }
 }
