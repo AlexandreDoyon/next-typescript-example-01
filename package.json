@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "netlify": "netlify",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "netlify-cli": "^3.37.1",
     "netlify-identity-widget": "^1.9.1",
     "next": "10.2.3",
     "react": "17.0.2",
