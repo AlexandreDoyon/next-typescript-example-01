@@ -18,5 +18,3 @@ exports.handler = async (event, context) => {
     body: JSON.stringify({ mssg: 'must be logged' })
   }
 }
-
-export {}
