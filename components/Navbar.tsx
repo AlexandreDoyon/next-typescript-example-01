@@ -15,8 +15,14 @@ console.log(user);
         <ul>
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/users"><a>Users</a></Link></li>
-          <li onClick={login} className="btn">Login/Signup</li>
-          <li onClick={logout} className="btn">Log out</li>
+
+
+          {!user && <li onClick={login} className="btn">Login/Signup</li>}
+          {user && <li>{user.email}</li>}
+          {user && <li>{user.user_metadata.full_name}</li>}
+          {user && <li onClick={logout} className="btn">Log out</li>}
+
+
         </ul>
       </nav>
       <div className="banner">
