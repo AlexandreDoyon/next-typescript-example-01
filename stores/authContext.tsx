@@ -5,7 +5,7 @@ const AuthContext = createContext({
   user: null,
   login: () => {},
   logout: () => {},
-  authReady: false
+  authReady: false,
 })
 
 export const AuthContextProvider = ({ children }) => {
@@ -41,10 +41,10 @@ export const AuthContextProvider = ({ children }) => {
     netlifyItentity.logout()
   }
 
-const context = { user, login, logout }
+const context = { user, login, logout, authReady:false }
 
   return (
-    <AuthContext.Provider value={context}>
+    <AuthContext.Provider value={ context }>
       { children }
     </AuthContext.Provider>
   )
